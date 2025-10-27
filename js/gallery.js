@@ -95,18 +95,15 @@ function handlerClick (event) {
     event.preventDefault();
     console.log(event.target);
 
-    if (event.target.nodeName !== "IMG") 
+    if (event.target.nodeName !== "IMG") {
         return;
-    else
-        console.log("pososi");
-
+    }
 
     const product = images.find(img => img.original === event.target.dataset.source);
 
     console.log(product);
     const instance = basicLightbox.create(`
-	<div class = "modal">
-    <img = "${product.original}" alt = "${product.description}" />
+        <img src = "${product.original}" alt = "${product.description}" />
     `)  
 
     instance.show();

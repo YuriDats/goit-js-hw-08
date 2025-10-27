@@ -1,11 +1,22 @@
 .gallery {
-    border: solid 12px violet ;
-    
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  padding: 0;
+  list-style: none;
 }
+
 .gallery-item {
-    border: solid 12px black ;
+  flex-basis: calc((100% / 3) - 48px);
+}
+.gallery-image {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s;
 }
 
-.gallery-image {
-
+.gallery-image:hover {
+  transform: scale(1.05);
 }
